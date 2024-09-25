@@ -8,6 +8,13 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits) {
   //ASSERT_EQ(soundex,"A200");
 }
 
+TEST(SoudexTestsuite, ConvertsLowercaseToUppercaseAndEncodes) {
+  char soundex[5];
+  generateSoundex("apoorva", soundex);
+  EXPECT_STREQ(soundex,"A161");
+  
+}
+
 /*
 TEST(SoudexTestsuite, IgnoresNumbersAndEncodesRemainingCharacters) {
   char soundex[5];
@@ -27,13 +34,6 @@ TEST(SoudexTestsuite, ReturnsZerosForDigitOnlyInput) {
   char soundex[5];
   generateSoundex("63619156", soundex);
   EXPECT_STREQ(soundex,"6000");
-  
-}
-
-TEST(SoudexTestsuite, ConvertsLowercaseToUppercaseAndEncodes) {
-  char soundex[5];
-  generateSoundex("apoorva", soundex);
-  EXPECT_STREQ(soundex,"A161");
   
 }
 
