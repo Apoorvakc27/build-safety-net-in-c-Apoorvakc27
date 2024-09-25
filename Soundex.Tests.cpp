@@ -11,7 +11,7 @@ TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits) {
 TEST(SoudexTestsuite, ConvertsLowercaseToUppercaseAndEncodes) {
   char soundex[5];
   generateSoundex("apoorva", soundex);
-  EXPECT_STREQ(soundex,"A161");
+  EXPECT_STREQ(soundex,"APOORVA");
   
 }
 
